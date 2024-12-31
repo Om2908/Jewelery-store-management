@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "cd3922b1-fe62-4991-89a9-1c59c6bfb09a",
+		"name": "Sales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39177876"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"voucherDate\": \"2024-12-26\",\r\n  \"clientId\":4,\r\n  \"orders\": [\r\n    {\r\n      \"category\": \"Ring\",\r\n      \"grossWeight\": 12,\r\n      \"netWeight\": 10,\r\n      \"stoneWeight\": 4,\r\n      \"rate\": 400\r\n    },\r\n     {\r\n      \"category\": \"chain\",\r\n      \"grossWeight\": 7,\r\n      \"netWeight\": 2,\r\n      \"stoneWeight\": 2,\r\n      \"rate\": 500\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

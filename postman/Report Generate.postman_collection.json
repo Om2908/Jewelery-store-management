@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "c95a01be-e393-4212-82d8-882681d47d90",
+		"name": "Report Generate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39177876"
+	},
+	"item": [
+		{
+			"name": "purchase report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/purchase/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"purchase",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase csv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/purchase/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"purchase",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sales report",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "sales csv",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "balance report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/balance-sheet/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"balance-sheet",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balance csv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/balance-sheet/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"balance-sheet",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

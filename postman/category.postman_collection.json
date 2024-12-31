@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "5f0f90aa-ed2c-4ae4-b282-47c00e038e61",
+		"name": "category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39177876"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"rudraxchain\",\r\n     \"material\":\"gold\",\r\n      \"code\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/category/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"rudraxchain\",\r\n     \"material\":\"silver\",\r\n      \"code\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/category/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"5"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzM1MTk1MDEwLCJleHAiOjE3MzUxOTg2MTB9.jusxrVYkyOkHLLspyxC82TheGLP3l7WfVG6CyzlNiLo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/category/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
