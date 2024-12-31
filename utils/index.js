@@ -27,6 +27,4 @@ exports.exportToPDF = (res, data, templateName, filename) => {
         res.attachment(filename);
         stream.pipe(res);
     });
-
-    //
 };

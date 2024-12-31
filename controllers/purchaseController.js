@@ -12,7 +12,6 @@ const createPurchase = async (req, res) => {
         totalInvoiceAmount+= val;
         console.log(totalInvoiceAmount)
     });
-  //  return res.json({totalInvoiceAmount});
     const purchase = await Purchase.create({
       voucherDate,
       clientId,

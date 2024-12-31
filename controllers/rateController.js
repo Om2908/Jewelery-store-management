@@ -1,6 +1,4 @@
 const RateMaster = require('../models/rate');
-
-// Create or Update Rate Master
 const upsertRateMaster = async (req, res) => {
   const { rate } = req.body;
 
@@ -9,10 +7,8 @@ const upsertRateMaster = async (req, res) => {
   }
 
   try {
-    // Delete existing record
     await RateMaster.destroy({truncate:true})
 
-    // Insert new recor
     const newRate = await RateMaster.create({ rate });
 
     res.status(200).json({ message: 'Rate Master updated successfully', newRate });

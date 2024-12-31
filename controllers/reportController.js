@@ -14,8 +14,6 @@ exports.getPurchaseCsvReport = async (req, res) => {
         {
         purchase=await Purchase.findOne({where:{clientId:clientId}});
         }
-        // console.log(purchase);
-
         const  offset=(page-1)*limit;
 
         const whereClause = {};
@@ -33,8 +31,6 @@ exports.getPurchaseCsvReport = async (req, res) => {
             limit: parseInt(limit),
             offset: parseInt(offset)
         });
-    //    console.log("hello Deep",purchaseorders);
-
     const reportData = purchaseorders.rows.map(purchaseorders => ({
         clientName: purchaseorders.Purchase.client.name,
         CategoryName:purchaseorders.category,
@@ -64,7 +60,6 @@ exports.getPurchasePdfReport = async (req, res) => {
         {
         purchase=await Purchase.findOne({where:{clientId:clientId}});
         }
-        // console.log(purchase);
 
         const  offset=(page-1)*limit;
 
@@ -83,7 +78,7 @@ exports.getPurchasePdfReport = async (req, res) => {
             limit: parseInt(limit),
             offset: parseInt(offset)
         });
-    //    console.log("hello Deep",purchaseorders);
+    //    console.log("om",purchaseorders);
 
     const reportData = purchaseorders.rows.map(purchaseorders => ({
         clientName: purchaseorders.Purchase.client.name,
@@ -134,7 +129,6 @@ exports.getSalesPdfReport = async (req, res) => {
             limit: parseInt(limit),
             offset: parseInt(offset)
         });
-    // //    console.log("hello Deep",purchaseorders);
 
     const reportData = salesorders.rows.map(salesorders => ({
         clientName: salesorders.Sale.client.name,
@@ -184,7 +178,6 @@ exports.getSalesCsvReport = async (req, res) => {
             limit: parseInt(limit),
             offset: parseInt(offset)
         });
-    // //    console.log("hello Deep",purchaseorders);
 
     const reportData = salesorders.rows.map(salesorders => ({
         clientName: salesorders.Sale.client.name,

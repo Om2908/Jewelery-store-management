@@ -1,7 +1,6 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 
-// Create a new user 
 exports.createUser = async (req, res) => {
   try {
     const { username, email, password, role } = req.body;
@@ -20,7 +19,6 @@ if(role=="super_admin")
   }
 };
 
-// get all user
 exports.getUserById = async (req, res) => {
   try {
     const user = await User.findAll();
@@ -33,7 +31,6 @@ exports.getUserById = async (req, res) => {
   }
 };
 
-// Update a user details 
 exports.updateUser = async (req, res) => {
   try {
     const { username, email, password, role } = req.body;
@@ -57,7 +54,6 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-// Delete a user by ID
 exports.deleteUser = async (req, res) => {
   try {
     const user = await User.findOne({ where: { id: req.params.id } });

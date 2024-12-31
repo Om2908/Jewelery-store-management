@@ -1,9 +1,8 @@
-// config/database.js
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('jewelery','root','root', {
     host:'localhost',
-  dialect: 'mysql', // Or your preferred database
+  dialect: 'mysql', 
 });
 
 sequelize.sync({alter:true}).then(()=>{

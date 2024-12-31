@@ -10,9 +10,7 @@ const createSales = async (req, res) => {
         const value=order.netWeight*order.rate;
           const val=value/10;
         totalInvoiceAmount+= val;
-        // console.log(totalInvoiceAmount)
     });
-  //  return res.json({totalInvoiceAmount});
     const sales = await Sales.create({
       voucherDate,
       clientId,

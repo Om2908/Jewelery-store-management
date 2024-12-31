@@ -10,7 +10,6 @@ exports.createCategory = async (req, res) => {
     }
 };
 
-// Get all categories
 exports.getAllCategories = async (req, res) => {
     try {
         const categories = await Category.findAll();
@@ -20,7 +19,6 @@ exports.getAllCategories = async (req, res) => {
     }
 };
 
-// Get a category by ID
 exports.getCategoryById = async (req, res) => {
     try {
         const category = await Category.findByPk(req.params.id);
@@ -31,7 +29,6 @@ exports.getCategoryById = async (req, res) => {
     }
 };
 
-// Update a category
 exports.updateCategory = async (req, res) => {
     try {
         const { name, material, code } = req.body;
@@ -45,7 +42,6 @@ exports.updateCategory = async (req, res) => {
     }
 };
 
-// Delete a category
 exports.deleteCategory = async (req, res) => {
     try {
         const category = await Category.findByPk(req.params.id);
