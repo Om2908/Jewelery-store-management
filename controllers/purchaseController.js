@@ -1,4 +1,6 @@
 const { Purchase, PurchaseOrder } = require('../models');
+const Client=require('../models/client')
+const {exportToPDF}=require('../utils/bill');
 
 const createPurchase = async (req, res) => {
   const { voucherDate, clientId, oppositeAccountName, orders } = req.body;
@@ -26,7 +28,39 @@ const createPurchase = async (req, res) => {
 
     await PurchaseOrder.bulkCreate(orders);
 
-    res.status(201).json({ message: 'Purchase created successfully', purchase });
+    let pur={};
+        if(purchase.clientId)
+        {
+        pur=await Purchase.findOne({where:{clientId:purchase.clientId}});
+        }
+
+        const whereClause = {};
+        if (purchase.clientId && pur) whereClause.purchaseId = pur.id;
+        if(!pur)
+            return res.json({msg:'data not found'});
+
+
+        const purchaseorders= await PurchaseOrder.findAndCountAll({
+            where:whereClause,
+            include: [{ model: Purchase, include: [ {model: Client, as: 'client'}] }],
+           
+        });
+    //    console.log("om",purchaseorders);
+
+    const reportData = purchaseorders.rows.map(purchaseorders => ({
+        clientName: purchaseorders.Purchase.client.name,
+        CategoryName:purchaseorders.category,
+        grossWeight: purchaseorders.grossWeight,
+        netWeight: purchaseorders.netWeight,
+        stoneWeight: purchaseorders.stoneWeight,
+        rate:purchaseorders.rate,
+        amount: purchaseorders.amount,
+    }));
+
+    // console.log(purchaseorders.rows[0].Purchase.client.email);
+    let totalamount=0;
+    reportData.forEach((reportData)=>totalamount+=reportData.amount)
+    return exportToPDF(res, reportData,totalamount, 'purchasebill.hbs',purchaseorders.rows[0].Purchase.client.email);
     
   } catch (error) {
     res.status(500).json({ error: error });

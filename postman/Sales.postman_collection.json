@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"voucherDate\": \"2024-12-26\",\r\n  \"clientId\":4,\r\n  \"orders\": [\r\n    {\r\n      \"category\": \"Ring\",\r\n      \"grossWeight\": 12,\r\n      \"netWeight\": 10,\r\n      \"stoneWeight\": 4,\r\n      \"rate\": 400\r\n    },\r\n     {\r\n      \"category\": \"chain\",\r\n      \"grossWeight\": 7,\r\n      \"netWeight\": 2,\r\n      \"stoneWeight\": 2,\r\n      \"rate\": 500\r\n    }\r\n  ]\r\n}",
+					"raw": "{\r\n  \"voucherDate\": \"2024-12-26\",\r\n  \"clientId\":1,\r\n  \"orders\": [\r\n    {\r\n      \"category\": \"Ring\",\r\n      \"grossWeight\": 12,\r\n      \"netWeight\": 10,\r\n      \"stoneWeight\": 4,\r\n      \"rate\": 400\r\n    },\r\n     {\r\n      \"category\": \"chain\",\r\n      \"grossWeight\": 7,\r\n      \"netWeight\": 2,\r\n      \"stoneWeight\": 2,\r\n      \"rate\": 500\r\n    }\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

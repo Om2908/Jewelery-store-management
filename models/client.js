@@ -6,6 +6,7 @@ const Ledger = require('./ledger');
 const Client = sequelize.define('Client', {
     name: { type: DataTypes.STRING, allowNull: false, validate: { notEmpty: true } },
     firmName: { type: DataTypes.STRING, allowNull: false, validate: { notEmpty: true } },
+    email: { type: DataTypes.STRING, allowNull: false, validate: { notEmpty: true } },
     gstNumber: { type: DataTypes.STRING, allowNull: false, validate: { is: /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[A-Z0-9]{1}[Z]{1}[A-Z0-9]{1}$/i } },
     panNumber: { type: DataTypes.STRING, allowNull: false, validate: { is: /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/ } },
     phoneNumber: { type: DataTypes.STRING, allowNull: false, validate: { is: /^[0-9]{10}$/ } },
@@ -20,6 +21,7 @@ Client.afterUpdate(async (client, options) => {
         {
             name: client.name,
             firmName: client.firmName,
+            email:client.email,
             gstNumber: client.gstNumber,
             panNumber: client.panNumber,
             phoneNumber: client.phoneNumber,

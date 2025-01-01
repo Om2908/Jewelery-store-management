@@ -3,12 +3,13 @@ const Ledger = require('../models/ledger');
 
 const createClient = async (req, res) => {
     try {
-        const { name, firmName, gstNumber, panNumber, phoneNumber, address, pincode } = req.body;
+        const { name, firmName,email, gstNumber, panNumber, phoneNumber, address, pincode } = req.body;
         const image = req.file ? req.file.path : null;
 
         const client = await Client.create({
             name,
             firmName,
+            email,
             gstNumber,
             panNumber,
             phoneNumber,
@@ -20,6 +21,7 @@ const createClient = async (req, res) => {
         await Ledger.create({
             name: client.name,
             firmName: client.firmName,
+            email:client.email,
             gstNumber: client.gstNumber,
             panNumber: client.panNumber,
             phoneNumber: client.phoneNumber,
@@ -56,14 +58,14 @@ const getClientById = async (req, res) => {
 const updateClient = async (req, res) => {
     try {
         
-        const { name, firmName, gstNumber, panNumber, phoneNumber, address, pincode } = req.body;
+        const { name, firmName,email, gstNumber, panNumber, phoneNumber, address, pincode } = req.body;
         console.log(req.body);
         const image = req.file ? req.file.path : null;
 
         const client = await Client.findByPk(req.params.id);
         if (!client) return res.status(404).json({ message: 'Client not found' });
 
-        await client.update({ name, firmName, gstNumber, panNumber, phoneNumber, address, pincode, image });
+        await client.update({ name, firmName,email, gstNumber, panNumber, phoneNumber, address, pincode, image });
         console.log(client);
         res.status(200).json(client);
     } catch (error) {

@@ -52,7 +52,20 @@
 			"name": "sales report",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/sales/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"sales",
+						"pdf"
+					]
+				}
 			},
 			"response": []
 		},
@@ -60,7 +73,20 @@
 			"name": "sales csv",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report/sales/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"sales",
+						"csv"
+					]
+				}
 			},
 			"response": []
 		},

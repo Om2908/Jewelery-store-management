@@ -4,6 +4,7 @@ const sequelize = require('../config/db');
 const Ledger = sequelize.define('Ledger', {
     name: DataTypes.STRING,
     firmName: DataTypes.STRING,
+    email:DataTypes.STRING,
     gstNumber: DataTypes.STRING,
     panNumber: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,

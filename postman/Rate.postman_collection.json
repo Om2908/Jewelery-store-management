@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"rate\":100\r\n}",
+					"raw": "{\r\n    \"rate\":300\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

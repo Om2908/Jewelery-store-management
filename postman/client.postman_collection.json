@@ -114,8 +114,12 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
-					"raw": "http://localhost:3000/clients/3",
+					"raw": "http://localhost:3000/clients/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,7 +127,7 @@
 					"port": "3000",
 					"path": [
 						"clients",
-						"3"
+						"2"
 					]
 				}
 			},
@@ -151,24 +155,38 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name ",
-							"value": "Abhishek sonii",
-							"type": "text"
+							"key": "name",
+							"value": "Abhisheksoni",
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/C:/Users/HP/OneDrive/Pictures/CN/Screenshot 2024-01-03 103044.png"
+							"src": "/C:/Users/HP/OneDrive/Pictures/CN/Screenshot 2024-01-03 103044.png",
+							"disabled": true
 						},
 						{
 							"key": "firmName",
-							"value": "soni farm",
+							"value": "Abhishek infotechh",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "panNumber",
+							"value": "BBCJI8896H",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "hotelworld3@gmail.com",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/clients/6",
+					"raw": "http://localhost:3000/clients/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -176,7 +194,7 @@
 					"port": "3000",
 					"path": [
 						"clients",
-						"6"
+						"2"
 					]
 				}
 			},
